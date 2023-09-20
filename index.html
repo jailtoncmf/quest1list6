@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <meta http-equiv=“Content-Type” content=“text/html; charset=iso-8859-1”>
+  <meta name="Jailton da Cruz Mocitaiba Filho, 200024655, bes017,  WEB" content="Atividades sobre JavaScript">
+  <script src="script.js"></script>
+  <title>JavaScript</title>
+
+
+  <form>
+    <label for="idade">Digite sua idade:</label>
+    <input type="number" id="idade" name="idade">
+    <button type="button" onclick="verificarFaixaEtaria()">Verificar Faixa Etária</button>
+  </form>
+  <p id="resultado"></p>
+
+  <script>
+    function verificarFaixaEtaria() {
+
+      const idade = parseInt(document.getElementById("idade").value);
+
+
+      var faixaEtaria = "";
+      if (idade >= 3 && idade <= 10) {
+        faixaEtaria = "3 a 10 anos";
+      } else if (idade >= 11 && idade <= 25) {
+        faixaEtaria = "11 a 25 anos";
+      } else if (idade >= 36 && idade <= 55) {
+        faixaEtaria = "36 a 55 anos";
+      } else if (idade >= 56 && idade <= 100) {
+        faixaEtaria = "56 a 100 anos";
+      } else {
+        faixaEtaria = "Fora das faixas etárias especificadas";
+      }
+
+      document.getElementById("resultado").textContent = "Você pertence à faixa de idade de " + faixaEtaria + ".";
+
+    }
+  </script>
+  </body>
+
+
+
+
+</html>
